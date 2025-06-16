@@ -6,10 +6,10 @@
 //using the length method on our string to find length of string
 //then call relevant odd/even function
 if (num.length % 2 == 0) { 
-    evenNumDoubler(num);
+    evenCheckSum(num);
 }
 else {
-    oddNumDoubler(num);
+    oddCheckSum(num);
 }
 
 //34978651 3 9 8 5  
@@ -44,4 +44,3 @@ else {
 //it is unclean and thus we must write a diff function which is 
 //both clean and modular i.e. divides and conquers the problem
 //the existing code is enough for this goal
-
