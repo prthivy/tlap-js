@@ -19,10 +19,10 @@
 //wrap around a conditional that runs until null is recieved 
 //= (ok button pressed w/o entering digit)
 
-let digit, number = ""; 
+let digit, num = ""; 
 while(digit !== "") {
     digit = prompt("enter digit");
-    number += digit;   
+    num += digit;   
 } 
-console.log(number); 
+console.log(num); 
 
