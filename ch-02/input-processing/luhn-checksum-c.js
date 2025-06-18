@@ -1,4 +1,4 @@
-//goal: handle deciding digit for doubling, for odd & even nos. 
+//goal:decide digit for doubling, for odd & even nos. 
 
 //423765 -> '2', '7', '5' will be doubled, or doubler will be called for those values
 //pos 0 to len (= 6)
