@@ -22,6 +22,7 @@ let posCheckPoint = ""
 
 stream = prompt("enter coded message") 
 
+//i think i should wrap this around a for loop that runs until end of stream
 while(stream.slice(pos-1, pos) !== ',' && stream.slice(pos-1, pos) !== "") {
     codedChar +=  stream.slice(pos-1, pos);
     pos++;
