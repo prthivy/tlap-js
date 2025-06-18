@@ -1,4 +1,4 @@
-//goal: collect the digits and concatenates them to form the number
+//goal: collect digits and concatenate them to form the number
 
 // let digit, number = 0; 
 // digit = prompt("enter digit");
