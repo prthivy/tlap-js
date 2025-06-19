@@ -5,7 +5,6 @@ let pos = 0;
 
 stream = prompt("enter coded message") //17, 324, 8605, 99999
 
-//while (stream.charAt(pos, pos + 1) !== "" && stream.charAt(pos + 1, pos + 2) !== "") {
 while (pos < stream.length) { //tysm claude <3
 while (stream.charAt(pos) !== ',' && stream.charAt(pos) !== "") {
     encodedDigits +=  stream.slice(pos, pos + 1); 
@@ -39,4 +38,6 @@ pos = pos + 2;
 //"25" + "6"
 //FALSE
 //pos = 8 
-    
+
+//old, inefficient logic:
+//while (stream.charAt(pos, pos + 1) !== "" && stream.charAt(pos + 1, pos + 2) !== "") {
