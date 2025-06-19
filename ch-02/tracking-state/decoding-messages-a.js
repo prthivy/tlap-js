@@ -13,6 +13,7 @@ while (stream.charAt(pos) !== ',' && stream.charAt(pos) !== "") {
 
 console.log(encodedDigits); //t1
 encodedDigits = ""
+//food for thought (passes): what will be the diff in output when you comment out above line?
 pos = pos + 2; 
 
 }
