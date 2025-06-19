@@ -1,51 +1,34 @@
 //goal: extract individual chars from an i/p stream of comma delimited chars
 
-//sample i/p stream: 14, 42943, 349, 32, 9, 2308
-//mock trace: 
-// 1. read 1. 
-// 2. add to empty string. 
-// 3. read 4. 
-// 4. add to string '1'. 
-// 5. read `comma`. 
-// 6. stop. mark the checkpoint
-// 7. decoding logic (decode number/change state) 
-// 8. store to message
-// 9. move to next number.  
-// 10. repeat logic from step 3.
-// 11. read `null` (ok pressed). 
-// 12. stop. 
-// 13. read stored message.  
+let stream, encodedDigits = "";
+let pos = 0;
 
-let stream, codedChar = ""
-let pos = 1;
-let posCheckPoint = ""
+stream = prompt("enter coded message") //17, 324, 8605, 99999
 
-stream = prompt("enter coded message") 
-
-//i think i should wrap this around a for loop that runs until end of stream
-while(stream.slice(pos-1, pos) !== ',' && stream.slice(pos-1, pos) !== "") {
-    codedChar +=  stream.slice(pos-1, pos);
-    pos++;
+while (stream.slice(pos, pos + 1) !== ',' && stream.slice(pos, pos+1) !== "") {
+    encodedDigits +=  stream.slice(pos, pos+1); 
+    pos++; //
 } 
- 
-//tracex: 
-//entered 14, 42943, 349, 32, 9, 2308
-//iteration 1: pos = 1. 
-    //loop: slice(0, 1) 
-    //codedChar = "" + "1"
-    //pos = 2
-//iteration 2: pos = 2. 
-    //loop: slice(1, 2)
-    //codedChar = "1" + "4"
-    //pos = 3
-//iteration 3: pos 3.
-    //loop: slice(2, 3). 
-    //cond: FALSE
-    //posCheckPoint = 3;
-    
-//...
-//
+
+console.log(encodedDigits); //t1
+pos = pos + 2; 
 
 
 
+while (stream.slice(pos, pos+1) !== ',' && stream.slice(pos, pos+1) !== "") {
+    encodedDigits +=  stream.slice(pos, pos+1); 
+    pos++; //
+} 
+
+console.log(encodedDigits); 
+
+//tracex 1: 
+//pos = 0
+//TRUE, slice(0,1)
+//"" + "1"
+//pos = 1
+//TRUE, slice(1,2)
+//"1" + "7"
+//pos = 2
+//FALSE. 
     
