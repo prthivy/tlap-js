@@ -1,4 +1,5 @@
 //goal: write a switch case block with equations
+
 let mode = 'UPPERCASE';
 
     switch (mode) {
