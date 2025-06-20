@@ -11,7 +11,7 @@ stream = prompt("enter coded message") //18, 325, 8605, 99999
 while (pos < stream.length) {                                                   //tysm claude <3
 while (stream.charAt(pos) !== ',' && stream.charAt(pos) !== "") {
     console.log(encodedChars);
-    encodedChars += stream.slice(pos, pos + 1); 
+    encodedChars += stream.charAt(pos); 
     pos++; 
 } 
 
@@ -23,9 +23,33 @@ else if (mode === 'LOWERCASE' && encodedChars % 27 !== 0) {
     decodedLetters += String.fromCharCode((encodedChars % 27) + 96); 
 }
 
-else if (mode === 'LOWERCASE' && encodedChars % 9 !== 0) {
-    decodedLetters =+ 
-    //punctuation logic 
+else if (mode === 'PUNCTUATION' && encodedChars % 9 !== 0) {
+    switch (encodedChars % 9) {
+        case 1: 
+           decodedLetters += '!'; 
+           break;
+        case 2:
+           decodedLetters += '?';
+           break;            
+        case 3:
+           decodedLetters += ','; 
+           break;            
+        case 4:
+           decodedLetters += '.'; 
+           break;            
+        case 5:
+           decodedLetters += ' '; 
+           break;            
+        case 6:
+           decodedLetters += ';';
+           break;            
+        case 7:
+           decodedLetters += '"'; 
+           break;            
+        case 8:
+           decodedLetters += "'";
+           break;            
+    }
 }
 
 else { 
