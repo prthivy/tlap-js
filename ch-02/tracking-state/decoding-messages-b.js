@@ -1,6 +1,6 @@
 //goal: decode characters into letters/punctuation
 
-let stream, encodedDigits = "";
+let stream, encodedDigits, decodedLetter, message = "";
 let pos = 0;
 
 stream = prompt("enter coded message") //17, 324, 8605, 99999
@@ -23,8 +23,29 @@ while (stream.charAt(pos) !== ',' && stream.charAt(pos) !== "") {
 //when overall i/p ends, print the decoded output. 
 
 const mode = 'UPPERCASE'; 
-if (encodedDigits % 27 !== 0) {
-    String.fromCharCode(encodedDigits % 27);
+
+if (mode = 'UPPERCASE' && encodedDigits % 27 !== 0) {
+    decodedLetter += String.fromCharCode((encodedDigits % 27) + 64);  
+}
+
+else { 
+mode = 'LOWERCASE';  
+}
+
+if (mode = 'LOWERCASE' && encodedDigits % 27 !== 0) {
+    decodedLetter += String.fromCharCode((encodedDigits % 27) + 96);  
+}
+
+else { 
+mode = 'PUNCTUATION'; 
+}
+
+if (mode = 'LOWERCASE' && encodedDigits % 27 !== 0) {
+    decodedLetter += String.fromCharCode((encodedDigits % 27) + 96);  
+}
+
+else { 
+mode = 'UPPERCASE'; 
 }
 
 
