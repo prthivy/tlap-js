@@ -16,42 +16,39 @@ while (stream.charAt(pos) !== ',' && stream.charAt(pos) !== "") {
 } 
 
 if (mode === 'UPPERCASE' && encodedChars % 27 !== 0) {
-    console.log(encodedChars);
     decodedLetters += String.fromCharCode((encodedChars % 27) + 64); 
 }
 
+else if (mode === 'LOWERCASE' && encodedChars % 27 !== 0) {
+    decodedLetters += String.fromCharCode((encodedChars % 27) + 96); 
+}
+
+else if (mode === 'LOWERCASE' && encodedChars % 9 !== 0) {
+    decodedLetters =+ 
+    //punctuation logic 
+}
+
 else { 
-    mode = 'LOWERCASE';  
+    switch (mode) {
+        case 'UPPERCASE':
+            mode = 'LOWERCASE';
+            break;
+
+        case 'LOWERCASE':
+            mode = 'PUNCTUATION';
+            break;
+
+        case 'PUNCTUATION':
+            mode = 'UPPERCASE';
+            break;
+    } 
 }
 
-if (mode === 'LOWERCASE' && encodedChars % 27 !== 0) {
-    decodedLetters += String.fromCharCode((encodedChars % 27) + 96);  
-}
-
-else { 
-    mode = 'PUNCTUATION';
-}
-
-if (mode === 'PUNCTUATION' && encodedChars % 27 !== 0) {
-    //symbol table logic 
-}
-
-// else { 
-//     mode = 'UPPERCASE';
-// }
-
-//console.log(decodedLetters);
 encodedChars = "";
 pos = pos + 2; 
 }
 
 console.log(decodedLetters); 
-
-
-//tracex: 
-//stream = 18, 324
-
-
 
 
 

@@ -31,7 +31,7 @@ else {
     mode = 'PUNCTUATION';
 }
 
-if (mode === 'PUNCTUATION' && encodedChars % 27 !== 0) {
+if (mode === 'PUNCTUATION' && encodedChars % 9 !== 0) {
     //symbol table logic 
 }
 
