@@ -14,13 +14,11 @@ let encodedDigits = 18;
 let mode = 'UPPERCASE'; 
 
 if (mode === 'UPPERCASE' && encodedDigits % 27 !== 0) {
-    console.log(mode);
     decodedLetter += String.fromCharCode((encodedDigits % 27) + 64);  
 }
 
 else { 
     mode = 'LOWERCASE';  
-    console.log(mode);
 }
 
 if (mode === 'LOWERCASE' && encodedDigits % 27 !== 0) {
@@ -28,11 +26,11 @@ if (mode === 'LOWERCASE' && encodedDigits % 27 !== 0) {
 }
 
 else { 
-     
+    mode = 'PUNCTUATION';
 }
 
-if (mode === 'LOWERCASE' && encodedDigits % 27 !== 0) {
-    decodedLetter += String.fromCharCode((encodedDigits % 27) + 96);  
+if (mode === 'PUNCTUATION' && encodedDigits % 27 !== 0) {
+    //symbol table logic 
 }
 
 else { 

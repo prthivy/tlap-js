@@ -2,6 +2,7 @@
 
 let stream, encodedDigits, decodedLetter, message = "";
 let pos = 0;
+let mode = 'UPPERCASE';
 
 stream = prompt("enter coded message") //17, 324, 8605, 99999
 
@@ -21,8 +22,6 @@ while (stream.charAt(pos) !== ',' && stream.charAt(pos) !== "") {
 //if case SY and modulo = 0, case UC.
 
 //when overall i/p ends, print the decoded output. 
-
-const mode = 'UPPERCASE'; 
 
 if (mode = 'UPPERCASE' && encodedDigits % 27 !== 0) {
     decodedLetter += String.fromCharCode((encodedDigits % 27) + 64);  
