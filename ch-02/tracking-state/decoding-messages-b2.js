@@ -6,30 +6,32 @@
 // let encoded = '83';
 // String.fromCharCode(encoded);
 
-// encodedDigits = 18;
-// String.fromCharCode((encodedDigits % 27) + 64); 
+// encodedChars = 18;
+// String.fromCharCode((encodedChars % 27) + 64); 
 
-let decodedLetter = "";
-let encodedDigits = 18;
+let decodedLetters = "";
+let encodedChars = 18; //shoulda added more values here
 let mode = 'UPPERCASE'; 
 
-if (mode === 'UPPERCASE' && encodedDigits % 27 !== 0) {
-    decodedLetter += String.fromCharCode((encodedDigits % 27) + 64);  
+if (mode === 'UPPERCASE' && encodedChars % 27 !== 0) {
+    console.log(encodedChars);
+    decodedLetters += String.fromCharCode((encodedChars % 27) + 64); 
+    console.log(decodedLetters); 
 }
 
 else { 
     mode = 'LOWERCASE';  
 }
 
-if (mode === 'LOWERCASE' && encodedDigits % 27 !== 0) {
-    decodedLetter += String.fromCharCode((encodedDigits % 27) + 96);  
+if (mode === 'LOWERCASE' && encodedChars % 27 !== 0) {
+    decodedLetters += String.fromCharCode((encodedChars % 27) + 96);  
 }
 
 else { 
     mode = 'PUNCTUATION';
 }
 
-if (mode === 'PUNCTUATION' && encodedDigits % 27 !== 0) {
+if (mode === 'PUNCTUATION' && encodedChars % 27 !== 0) {
     //symbol table logic 
 }
 
@@ -37,4 +39,4 @@ else {
     mode = 'UPPERCASE';
 }
 
-console.log(decodedLetter);
+console.log(decodedLetters);
