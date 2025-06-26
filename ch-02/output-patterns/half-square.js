@@ -1,4 +1,16 @@
-//tracex:
+//logic a
+for(row = 1; row < 3; row++) {
+    let pattern = "";
+        for(i = 0; i < row; i++) {
+            pattern += '#';
+        }
+        console.log(pattern);
+}
+
+
+//comment archive
+
+//tracex a:
 
     //row = 0
         //i TRUE
@@ -13,15 +25,9 @@
         //i FALSE
         //print
 
+// rev: empty, empty + symbol(1), empty + symbol(1) + symbol(2)
 
-for(row = 1; row < 3; row++) {
-    let pattern = "";
-        for(i = 0; i < row; i++) {
-            pattern += '#';
-        }
-        console.log(pattern);
-}
-
+//logic b: 
 // for(row = 1; row < 3; row++) {
 //     let pattern = "";
 //         for(i = 0; i < 2; i++) {
@@ -30,8 +36,59 @@ for(row = 1; row < 3; row++) {
 //         console.log(pattern);
 // }
 
-//tracex that^:
-//basically, for all iterations it runs twice
-//whereas the solution adjusts itself to the incrementing variable
+//tracex b:
+//row 1, "", #(0), ##(1), "", #(0), ##(1)
+
+
+//logic c:
+//for(row = 1; row <= 2 ; row++){ 
+//     let pattern = "";
+//         for(i = 0; i < row; i++) {
+//             pattern += '#';
+//             }
+//         console.log(pattern);
+// }
+
+//logic d:
+// for(row = 1; row <= 2 ; row++){ 
+//     let pattern = "";
+//         for(i = 0; i <= row; i++) {
+//             pattern += '#';
+//             }
+//         console.log(pattern);
+// }
+
+//tracex d: 
+//row 1: "", #, ##, false, print
+//row 2: "", #, ##, ###, false, print
+
+
+//logic e:
+// for(row = 1; row < 3; row++) {
+//     let pattern = "";
+//     for(i = 3; i > row; i--)
+//     {
+//         pattern += '#';
+//     }
+//     console.log(pattern);
+// }
+
+//tracex e:
+//row 1: "", i 3: #, i 2: ##, i 1:, false, print
+//row 2: "", i 2: #, i 1:, false, print
+
+//logic f
+// for(row = 0; row < 2; row++) {
+//     let pattern = "";
+//     for(i = 2; i > row; i--) {
+//         pattern += '#';
+//     }
+//     console.log(pattern);
+// }
+
+//tracex f:
+//row 0: "", i2, true, #, --, i1, true, ##, --, i0, false, print ##
+//row 1: "", i2, true, #, --, i1, false, print #
+
 
 
