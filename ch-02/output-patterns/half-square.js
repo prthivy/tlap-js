@@ -1,14 +1,14 @@
-//logic a
-for(row = 1; row < 3; row++) {
-    let pattern = "";
-        for(i = 0; i < row; i++) {
-            pattern += '#';
-        }
-        console.log(pattern);
-}
+//logic a: using browser
+// for(row = 1; row < 3; row++) {
+//     let pattern = "";
+//         for(i = 0; i < row; i++) {
+//             pattern += '#';
+//         }
+//         console.log(pattern);
+// }
 
 
-//comment archive
+//comment archive (followed by node version)
 
 //tracex a:
 
@@ -89,6 +89,24 @@ for(row = 1; row < 3; row++) {
 //tracex f:
 //row 0: "", i2, true, #, --, i1, true, ##, --, i0, false, print ##
 //row 1: "", i2, true, #, --, i1, false, print #
+
+
+
+//logic g: using terminal
+
+//logic g prep:
+//1 row, 3 sym
+//2 row, 2 sym
+//3 row, 1 sym
+//eqn: sym = 4 - row
+
+
+for(let row = 1; row < 4; row++) {
+    for(i = 0; i < 4 - row; i++) {
+       process.stdout.write('#'); 
+    }
+    process.stdout.write('\n'); 
+}
 
 
 
