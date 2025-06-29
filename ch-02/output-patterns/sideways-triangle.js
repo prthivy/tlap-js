@@ -33,8 +33,8 @@
 
 //logic b: using terminal
 
-for(row = 1; row < 8; row++) {
-    for(i = 0; i < (4 - Math.abs(4 - row)); i++) {
+for(let row = 1; row < 8; row++) {
+    for(let i = 0; i < (4 - Math.abs(4 - row)); i++) {
     process.stdout.write("#");
     }
 process.stdout.write("\n");

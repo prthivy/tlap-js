@@ -102,7 +102,7 @@
 
 
 for(let row = 1; row < 4; row++) {
-    for(i = 0; i < 4 - row; i++) {
+    for(let i = 0; i < 4 - row; i++) {
        process.stdout.write('#'); 
     }
     process.stdout.write('\n'); 
