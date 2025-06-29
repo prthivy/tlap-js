@@ -18,3 +18,15 @@
 
 //logic b: using terminal
 
+for(let row = 1; row < 5; row++) {
+    for(let i = 0; i < row - 1; i++) {
+        process.stdout.write(" ");
+    }
+    for(let j = 0; j < 5 - row; j++) {
+        process.stdout.write("#");
+    }
+    for(let k = 0; k < row - 1; k++) {
+        process.stdout.write(" ");
+    }
+process.stdout.write("\n");
+}
