@@ -1,10 +1,12 @@
-for (row = 1; row < 8; row++) {
-    pattern = "";
-    for (i = 0; i < (4 - Math.abs(4 - row)); i++) {
-        pattern += '#';
-    }
-    console.log(pattern); 
-}
+//logic a: using browser
+
+// for (row = 1; row < 8; row++) {
+//     pattern = "";
+//     for (i = 0; i < (4 - Math.abs(4 - row)); i++) {
+//         pattern += '#';
+//     }
+//     console.log(pattern); 
+// }
 
 //what i want (from core equation)
 //4 - (4 - 1) = 1
@@ -29,6 +31,14 @@ for (row = 1; row < 8; row++) {
 //row 3: ###, i = 3, i < 3 false, print ###
 
 
+//logic b: using terminal
+
+for(row = 1; row < 8; row++) {
+    for(i = 0; i < (4 - Math.abs(4 - row)); i++) {
+    process.stdout.write("#");
+    }
+process.stdout.write("\n");
+}
 
 
 
