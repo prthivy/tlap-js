@@ -18,6 +18,12 @@
 
 //logic b: using terminal
 
+//logic b prep:
+//1 row, 4 sym, 0 space
+//2 row, 3 sym, 1 space
+//3 row, 2 sym, 2 space
+//4 row, 1 sym, 3 space
+
 for(let row = 1; row < 5; row++) {
     for(let i = 0; i < row - 1; i++) {
         process.stdout.write(" ");
