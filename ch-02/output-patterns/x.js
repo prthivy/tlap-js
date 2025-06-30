@@ -68,15 +68,6 @@ for(row = 1; row < 4; row++) {
 console.log(pattern);
 }
 
-
-
-
-
-
-
-
-
-
 //logic b: using terminal
 
 //upper half logic
