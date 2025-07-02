@@ -1,27 +1,27 @@
 let inputDecimal = "";
-let binary = "";
-let power = 31; 
 let remainder = "";
+let exponent = 31;
+let binary = "";
 
-inputDecimal = prompt("enter a decimal number"); // (this is browser version of the code)
-// inputDecimal = 65537; //this is terminal version of the code
-console.log(inputDecimal);
+inputDecimal = prompt("enter decimal:");
+// console.log(inputDecimal);
+
 remainder = inputDecimal;
 
 while(remainder !== 0) {
-    if(remainder - Math.pow(2, power) < 0) {
-        binary += 0;
-        power--;
+    if(remainder - Math.pow(2, exponent) >= 0) {
+        binary += "1"; 
+        remainder -= Math.pow(2, exponent);
+        exponent--;
     }
-
     else {
-        binary += 1;
-        remainder -= Math.pow(2, power);
-        power--;
-    }   
+        binary += "0";
+        exponent--;
+    }
 }
 
-while(binary.length < 32) {
+//appends remaining 0s once rem is 0
+while(binary.length < 32) { 
     binary += "0";
 }
 
