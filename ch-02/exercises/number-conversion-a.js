@@ -1,3 +1,4 @@
+//goal: decimal to binary conversion
 let inputDecimal = "";
 let remainder = "";
 let exponent = 31;
