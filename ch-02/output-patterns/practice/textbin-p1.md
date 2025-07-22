@@ -24,4 +24,4 @@
     - Developing the logic: From the table, it's clear that when row = 0, symbol = 4 - row. This is the logic.
     - Implementing into the generator: Iterator goes from 0 to 4, and generator goes from 0 to 4 - row. After each iteration, the line is terminated.
 
-## 
+## Sideways Triangle Tracex
