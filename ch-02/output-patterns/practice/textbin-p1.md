@@ -10,16 +10,18 @@
 
 - Let trace this process for the case of half-square in js node:
 
-  - Js node implementation means line termination will be needed:
+  1. Js node implementation means line termination will be needed:
     - `process.stdout.write('#')` will print the symbols 
     - and `process.stdout.write('\n')` will handle the line termination. 
   
-  - First, the iterator row will be written: 
+  2. First, the iterator row will be written: 
     - It runs for 4 rows. 
     - So, a for loop from 0 till 4. 
   
-  - Then, the generator(s) (in our case, 1) will be written:
+  3. Then, the generator(s) (in our case, 1) will be written:
     - Discovering the relationship: this is best done by forming and studying a relationship discovery table. 
     - When row = 0, symbol = 4. When row = 1, symbol = 3. When row = 2, symbol = 2. When row = 3, symbol = 1. This is the relationship.
     - Developing the logic: From the table, it's clear that when row = 0, symbol = 4 - row. This is the logic.
     - Implementing into the generator: Iterator goes from 0 to 4, and generator goes from 0 to 4 - row. After each iteration, the line is terminated.
+
+## 

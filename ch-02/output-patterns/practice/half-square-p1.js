@@ -95,4 +95,3 @@ for(let row = 0; row < 4; row++) {
     process.stdout.write('\n');
 }
 
-
