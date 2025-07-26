@@ -25,3 +25,18 @@
     - Implementing into the generator: Iterator goes from 0 to 4, and generator goes from 0 to 4 - row. After each iteration, the line is terminated.
 
 ## Sideways Triangle Tracex
+Logic A:
+row = 1
+i = 0; i < 1; i++ //pass 1
+i = 1; i < 1 False
+
+row = 2
+i = 0; i < 1; i++ //pass 1
+i = 1; i < 2; i++ //pass 2
+i = 2; i < 2 False
+
+Logic B:
+row = 0
+i = 0; i < 0; i++ False
+Gotcha! 
+The code only works normally if you add an additional row
